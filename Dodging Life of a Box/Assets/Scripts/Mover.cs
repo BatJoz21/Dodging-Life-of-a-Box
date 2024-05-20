@@ -9,7 +9,7 @@ public class Mover : MonoBehaviour
     
     void Start()
     {
-        
+        PrintInstructions();
     }
 
     void Update()
@@ -22,5 +22,12 @@ public class Mover : MonoBehaviour
         float xValue = Input.GetAxis("Horizontal");
         float zValue = Input.GetAxis("Vertical");
         transform.Translate(xValue * moveSpeed * Time.deltaTime, 0, zValue * moveSpeed * Time.deltaTime);
+    }
+
+    private void PrintInstructions()
+    {
+        Debug.Log("Welcome to the game!");
+        Debug.Log("Move by pressing WASD button");
+        Debug.Log("Don't hit the walls!");
     }
 }
