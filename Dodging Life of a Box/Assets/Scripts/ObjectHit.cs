@@ -16,6 +16,7 @@ public class ObjectHit : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             meshRenderer.material.color = Color.gray;
+            gameObject.tag = "Hit";
         }
     }
 }

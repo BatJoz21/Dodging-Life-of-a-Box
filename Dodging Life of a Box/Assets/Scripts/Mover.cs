@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 0.01f;
-    [SerializeField] private float jumpSpeed = 0.01f;
+    //[SerializeField] private float jumpSpeed = 0.01f;
     
     void Start()
     {
@@ -20,6 +20,7 @@ public class Mover : MonoBehaviour
     private void Movement()
     {
         float xValue = Input.GetAxis("Horizontal");
+        //float yValue = Input.GetAxis("Jump");
         float zValue = Input.GetAxis("Vertical");
         transform.Translate(xValue * moveSpeed * Time.deltaTime, 0, zValue * moveSpeed * Time.deltaTime);
     }
